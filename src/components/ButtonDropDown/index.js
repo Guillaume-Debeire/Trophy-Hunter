@@ -9,17 +9,13 @@ const variants = {
     closed: { y: -765 },
 }
 
-const transition = {
-    type: "spring",
-    stiffness: 200,
-    damping: 50,
-};
+
 
 const ButtonDropDown = () => {
     const [isOpen, setIsOpen] = useState(true);
 
         return (
-        <motion.div animate={isOpen ? "open" : "closed"} variants={variants} transition={transition} initial={false}>
+        <motion.div animate={isOpen ? "open" : "closed"} variants={variants} transition={{ duration: .4 }} initial={false}>
             <div className='drop'>
                 <DarkModeButton />
                 <button type='button' className='drop-button' onClick={() => setIsOpen(isOpen => !isOpen)}>{isOpen? '^' : 'v'}</button>

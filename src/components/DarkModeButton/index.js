@@ -8,15 +8,20 @@ const variants = {
     closed: { x: 0 },
 }
 
+
+
 const DarkModeButton = () => {
     const [isActive, setIsActive] = useState(false);
     return (
     <div className='dm-button'>
-        <div  className='dm-button-background' onClick={() => setIsActive(!isActive)}>
-                <motion.button animate={isActive ? "open" : "closed"} variants={variants} transition={{
-                    x: { type: "spring", stiffness: 20,  },
-                    duration: .1
-                }} initial={false}type='button' className='dm-button-button' />
+        <div  className='dm-button-background' onClick={() => setIsActive(isActive => !isActive)}>
+                <motion.div
+                    animate={isActive ? "open" : "closed"}
+                    variants={variants}
+                    transition={{ duration: .2 }}
+                    initial={false}
+                    className='dm-button-button' 
+                />
         </div>
     </div> 
     )
