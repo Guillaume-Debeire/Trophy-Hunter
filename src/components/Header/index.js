@@ -1,11 +1,13 @@
 import React from 'react';
 
+import ButtonDropDown from 'src/components/ButtonDropDown'
+
 import './style.scss';
 
 const Header = () => (
     <div className='header'>
         <header>
-            <h1>Trophy Hunter</h1>
+            <ButtonDropDown />
         </header>
     </div>
 );

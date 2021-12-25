@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "axios": "^0.24.0",
+    "framer-motion": "^5.5.5",
     "prop-types": "^15.7.2",
     "psn-api": "^2.6.0",
     "react": "^17.0.1",

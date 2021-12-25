@@ -1,10 +1,13 @@
+@use 'src/styles/vars';
+
 .app {
-  width: 500px;
-  margin: 1rem auto;
+  width: 375px;
+  margin: auto;
   text-align: center;
-  background-color: rgb(240, 240, 255);
+  background-color: vars.$white;
   height: 100vh;
-  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .app img {

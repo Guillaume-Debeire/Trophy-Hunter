@@ -1,0 +1,36 @@
+@use 'src/styles/vars';
+
+.dm-button {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    &-background {
+        position: relative;
+        width: 4rem;
+        height: 2rem;
+        border-radius: 30px;
+        background-color: vars.$white;
+    }
+    &-button {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        border: none;
+        background-color: vars.$primaryColor;
+        height: 1.6rem;
+        width: 1.6rem;
+        border-radius: 50%;
+        transition: all 2s;
+        
+        &-active {
+            position: absolute;
+            top: 10%;
+            border: none;
+            background-color: vars.$primaryColor;
+            height: 1.6rem;
+            width: 1.6rem;
+            border-radius: 50%;
+            transition: all 2s;
+        }
+    }
+}
