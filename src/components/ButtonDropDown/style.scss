@@ -6,19 +6,38 @@
     height: calc(100vh - 4rem);
     background-color: vars.$primaryColor;
     position: relative;
-    z-index: 150;
-    border-radius: 0 0 20px 20px;
-    &-button {
-        background-color: vars.$primaryColor;
-        color: vars.$white;
-        border: none;
-        text-align: center;
+    z-index: 200;
+    border-radius: 0 0 15px 15px;
+    
+    &-footer {
         position: absolute;
-        bottom: -2rem;
+        bottom: -1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
-        height: 2rem;
-        width: 5rem;
-        border-radius: 0 0 8px 8px;
-        z-index: 150;
+        width: 100%;
+        &-button {
+            
+
+            background-color: vars.$primaryColor;
+            color: vars.$white;
+            border: none;
+            text-align: center;
+           
+            margin: auto;
+            height: 1.5rem;
+            width: 5rem;
+            border-radius: 0 0 8px 8px;
+            z-index: 150;
+            &-handler {
+                width: 3rem;
+                height: .3rem;
+                background-color: vars.$white;
+                border-radius: 5px;
+                margin: auto;
+            }
+        }
     }
+    
 }

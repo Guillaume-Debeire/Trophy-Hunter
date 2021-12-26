@@ -18,7 +18,7 @@ const DarkModeButton = () => {
                 <motion.div
                     animate={isActive ? "open" : "closed"}
                     variants={variants}
-                    transition={{ duration: .2 }}
+                    transition={{ duration: .1 }}
                     initial={false}
                     className='dm-button-button' 
                 />

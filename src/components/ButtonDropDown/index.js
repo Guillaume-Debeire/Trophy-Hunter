@@ -5,20 +5,28 @@ import DarkModeButton from 'src/components/DarkModeButton';
 import './style.scss';
 
 const variants = {
-    open: { y: -50 },
+    open: { y: -40 },
     closed: { y: -765 },
 }
 
 
 
 const ButtonDropDown = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
         return (
-        <motion.div animate={isOpen ? "open" : "closed"} variants={variants} transition={{ duration: .4 }} initial={false}>
+        <motion.div animate={isOpen ? "open" : "closed"} variants={variants} transition={{ duration: .3 }} initial={false}>
             <div className='drop'>
-                <DarkModeButton />
-                <button type='button' className='drop-button' onClick={() => setIsOpen(isOpen => !isOpen)}>{isOpen? '^' : 'v'}</button>
+                <div className='drop-body'>
+                    <DarkModeButton />
+                </div>
+                
+                <div className='drop-footer'>
+                    <button type='button' className='drop-footer-button' onClick={() => setIsOpen(isOpen => !isOpen)}>
+                        <div className='drop-footer-button-handler' />
+                    </button>
+                </div>
+                
             </div>
         </motion.div>
     )
