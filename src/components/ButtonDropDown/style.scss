@@ -5,6 +5,7 @@
     top: calc(-100vh + 4rem);
     width: 100%;
     margin: auto;
+    z-index: 2000;
 }
 
 .drop {
@@ -13,7 +14,6 @@
     height: calc(100vh - 4rem);
     background-color: vars.$primaryColor;
     position: relative;
-    z-index: 200;
     border-radius: 0 0 15px 15px;
     box-shadow: 0 2px 6px 1px vars.$primaryColorDark;
     
