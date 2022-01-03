@@ -15,3 +15,21 @@
 .app img {
   max-width: 150px;
 }
+
+.settings {
+  position: absolute;
+  bottom: 5rem;
+  right: 2rem;
+  border: none;
+  background: none;
+  width: 4rem;
+  height: 4rem;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: rotate(-90deg);
+  }
+  &-icon {
+    font-size: 3rem;
+    color: vars.$primaryColor
+  }
+}

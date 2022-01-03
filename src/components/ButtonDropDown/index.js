@@ -5,7 +5,7 @@ import DarkModeButton from 'src/components/DarkModeButton';
 import './style.scss';
 
 const variants = {
-    open: { y: 800 },
+    open: { y: 900 },
     closed: { y: 0 },
 }
 

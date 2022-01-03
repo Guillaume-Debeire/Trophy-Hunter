@@ -101,13 +101,12 @@
             position: absolute;
             top:0;
             left: 0;
-            width: 20%;
-            height: 20%;
             &-button {
-                border-radius: 15px;
-                background-color: vars.$primaryColor;
-                height: 2rem;
-                width: 2rem;
+                width: 0; 
+                height: 0; 
+                border-top: 6px solid transparent;
+                border-bottom: 6px solid transparent;
+                border-right:10px solid vars.$primaryColor;
 
 
             }

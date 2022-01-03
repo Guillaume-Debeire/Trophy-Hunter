@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './style.scss';
@@ -53,9 +54,11 @@ const Connexion = () => {
                         
                     </motion.div>
                     <div className="white-password" />
-                    <motion.div className='connexion-box-form-submit' onClick={() => setIsOpen(true)} animate={isOpen ? "closed" : "open"} variants={variants3} transition={{ duration: .5 }}>
-                        <span>Go</span>
-                    </motion.div>
+                    <NavLink to="home">
+                        <motion.button type='button' className='connexion-box-form-submit' onClick={() => setIsOpen(true)} animate={isOpen ? "closed" : "open"} variants={variants3} transition={{ duration: .5 }}>
+                            <span>Go</span>
+                        </motion.button>
+                    </NavLink>
                 </form>
             </motion.div>
 

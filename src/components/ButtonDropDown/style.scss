@@ -5,12 +5,13 @@
     top: calc(-100vh + 4rem);
     width: 100%;
     margin: auto;
-    z-index: 2000;
+    
 }
 
 .drop {
     width: 100%;
     margin: auto;
+    z-index: 2000;
     height: calc(100vh - 4rem);
     background-color: vars.$primaryColor;
     position: relative;

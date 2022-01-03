@@ -1,6 +1,6 @@
 export default [
     {
-      route: '/',
+      route: '/home',
       label: 'Home',
     },
     {
