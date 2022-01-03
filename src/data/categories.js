@@ -8,8 +8,8 @@ export default [
       label: 'Trophies',
     },
     {
-      route: '/options',
-      label: 'Options',
+      route: '/mygames',
+      label: 'My Games',
     },
   ];
   

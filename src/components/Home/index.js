@@ -1,9 +1,15 @@
 import React from 'react';
+import Title from 'src/trophy-ui/Title'
 
-const Home = () => (
-    <div className='home'>
-        <h1>Bienvenue sur Trophy Hunter!</h1>
-    </div>
-)
+const Home = () => {
+    const style = {
+        color: '#500CF3',
+    }
+    return (
+        <div className='home'>
+            <Title title='Home' style={style} />
+        </div>
+    )
+}
 
 export default Home;

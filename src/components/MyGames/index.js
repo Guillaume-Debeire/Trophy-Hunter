@@ -4,15 +4,15 @@ import Title from 'src/trophy-ui/Title'
 
 import './style.scss';
 
-const Trophies = () => {
+const MyGames = () => {
     const style = {
         color: '#500CF3',
     }
     return (
-        <div className='trophies'>
-            <Title title='Trophies' style={style} />
+        <div className='my-games'>
+            <Title title='My Games' style={style} />
         </div>
     )
 }
 
-export default Trophies;
+export default MyGames;

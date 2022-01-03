@@ -5,13 +5,18 @@ import Title from 'src/trophy-ui/Title'
 
 import './style.scss'
 
-const ModalSettings = () => (
-    <div className='settings-modal'>
-        <Container>
-            <Title title='Options' />
-            
-        </Container>
-    </div>
-)
+const ModalSettings = () => {
+    const style = {
+        color: 'white',
+    }
+    return (
+        <div className='settings-modal'>
+            <Container>
+                <Title title='Settings' style={style} />
+                
+            </Container>
+        </div>
+    )
+}
 
 export default ModalSettings;
