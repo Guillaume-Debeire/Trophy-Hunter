@@ -9,7 +9,7 @@
   height: 100vh;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .app img {
@@ -17,7 +17,7 @@
 }
 
 .settings {
-  position: absolute;
+  position: fixed;
   bottom: 5rem;
   right: 2rem;
   border: none;

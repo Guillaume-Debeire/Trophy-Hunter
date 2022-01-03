@@ -6,7 +6,8 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js",
     "clean": "rm -rf dist",
-    "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json"
+    "clean:all": "rm -rf dist node_modules yarn.lock package-lock.json",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -24,9 +25,11 @@
     "cssnano": "^4.1.10",
     "eslint": "^7.15.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
@@ -35,6 +38,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^4.1.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.5.1",
     "resolve-url-loader": "^3.1.2",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",

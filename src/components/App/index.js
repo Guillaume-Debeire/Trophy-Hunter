@@ -34,6 +34,7 @@ const App = () => {
             initial={{ x: 630, y: 480, opacity: 0, scale: 0 }}
             animate={{ x: 0, y: 0, opacity: 1, scale: 1 }}
             exit={{ x: 630, y: 480, opacity: 0, scale: 0 }}
+            transition={{ duration: .3 }}
           >
             <ModalSettings />
           </motion.div>
