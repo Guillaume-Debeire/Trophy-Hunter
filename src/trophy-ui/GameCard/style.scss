@@ -2,22 +2,84 @@
 @use 'sass:color';
 
 .gamecard {
-    width: 80%;
-    min-width: 400px;
-    height: 10rem;
-    margin: 1rem auto;
+    width: 88%;
+    min-width: 200px;
+    max-width: 800px;
+    height: 4rem;
+    margin: .8rem auto;
     background: linear-gradient(vars.$primaryColor, vars.$primaryColorDark);;
-    border-radius: 20px;
-    border: 5px solid vars.$primaryColorDark;
+    border-radius: 10px;
     position: relative;
+    box-shadow: 0 0 3px 1px rgba(35, 31, 56, 0.438);
+    transition: all .2s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.03);
+    }
 
     &-picture {
-        position: absolute;
-        right: 0;
-        height: 100%;
-        width: 50%;
-        background: url('src/assets/games/death-stranding.png');
-        background-repeat: no-repeat;
+        box-sizing: border-box;
+        width: 5%;
+        &-img {
+            box-sizing: border-box;
+            height: 90%;
+            border-radius: 5px;
+            margin: .2rem;
+        }
+    }
+
+    &-content {
+        color: vars.$white;
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        width: 80%;
+        &-left {
+            width: 40%;
+            text-align: left;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-right: 1px solid vars.$primaryColorLight;
+            &-title{
+                font-size: 12px;
+                padding: .3rem .5rem .1rem;
+            }
+            &-text {
+                padding: .5rem;
+            }
+        }
+        &-right {
+            width: 60%;
+            margin: auto .4rem;
+            max-width: 200px;
+            &-trophies {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: .2rem;
+                &-img {
+                    box-sizing: border-box;
+                    width: 20px;
+                }
+            }
+
+            &-number {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+                &-text {
+                    width: 20px;
+                }
+            }
+        }
     }
 
 }

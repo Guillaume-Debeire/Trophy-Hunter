@@ -8,7 +8,7 @@ import './style.scss';
 
 const Trophies = () => {
     const style = {
-        color: '#500CF3',
+        color: '#4e4368',
     }
     return (
         <AnimatePresence>

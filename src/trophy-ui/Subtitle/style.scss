@@ -1,0 +1,9 @@
+@use 'src/styles/vars.scss';
+
+.subtitle {
+    &-text {
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 1rem 1rem 0;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'src/trophy-ui/Container'
 import Title from 'src/trophy-ui/Title'
 import GameCard from '../../trophy-ui/GameCard';
@@ -8,7 +9,7 @@ import './style.scss';
 
 const MyGames = () => {
     const style = {
-        color: '#500CF3',
+        color: '#4e4368',
     }
     return (
         <AnimatePresence>
@@ -16,22 +17,41 @@ const MyGames = () => {
                 className='trophies'
                 initial={{ x: 10 }}
                 animate={{ x: 0 }}
-                exit={{ x: -10 }}
+                exit={{ scale: 1.05 }}
                 transition={{ duration: .2 }}
             >
                 <Title title='My Games' style={style} />
                 <div className='game-list'>
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
-                    <GameCard />
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
+                    <Link to="game-detail">
+                        <GameCard />
+                    </Link>
                 </div>
             </motion.div>
         </AnimatePresence>

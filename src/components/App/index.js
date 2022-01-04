@@ -9,6 +9,7 @@ import Connexion from 'src/components/Connexion';
 import Home from 'src/components/Home';
 import Trophies from 'src/components/Trophies'
 import MyGames from 'src/components/MyGames'
+import GameDetail from 'src/components/GameDetail'
 import ModalSettings from 'src/components/ModalSettings';
 import SettingsButton from '../../trophy-ui/Buttons/SettingsButton';
 import { SettingOutlined } from '@ant-design/icons'
@@ -26,6 +27,7 @@ const App = () => {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/trophies" element={<Trophies />} />
         <Route exact path="/mygames" element={<MyGames />} />
+        <Route exact path="/mygames/game-detail" element={<GameDetail />} />
       </Routes>
       <AnimatePresence>
         {openSettings && 
