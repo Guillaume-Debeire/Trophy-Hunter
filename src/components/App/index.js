@@ -21,13 +21,12 @@ const App = () => {
   const [openSettings, setOpenSettings] = useState(false);
   return (
     <div className="app">
-      <Header />
       <Routes>
         <Route exact path="/" element={<Connexion />} />
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/trophies" element={<Trophies />} />
         <Route exact path="/mygames" element={<MyGames />} />
-        <Route exact path="/mygames/game-detail" element={<GameDetail />} />
+        <Route exact path="/mygames/:game" element={<GameDetail />} />
       </Routes>
       <AnimatePresence>
         {openSettings && (
