@@ -4,12 +4,16 @@ export default [
       label: 'Home',
     },
     {
-      route: '/trophies',
-      label: 'Trophies',
+      route: '/friends',
+      label: 'Friends',
     },
     {
-      route: '/mygames',
-      label: 'My Games',
+      route: '/library',
+      label: 'Library',
+    },
+    {
+      route: '/profile',
+      label: 'My profile',
     },
   ];
   

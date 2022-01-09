@@ -19,7 +19,7 @@ const ajax = (store) => (next) => (action) => {
           console.error(error);
         });
       break;
-    }
+    } 
     /* LOGIN => To login a user already in db into API, get token in response */
     case LOGIN:
     {
