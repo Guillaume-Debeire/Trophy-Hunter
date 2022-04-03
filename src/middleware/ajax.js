@@ -21,14 +21,65 @@ const ajax = (store) => (next) => (action) => {
         });
       break;
     }
-    // /* LOGIN => To login a user already in db into API, get token in response */
-    // case LOGIN: {
-    //   const state = store.getState();
-    //   axios
-    //     .post('/api/login_check', {
-    //       username: state.user.username,
-    //       password: state.user.password
-    //     })
+    /* LOGIN => To login a user already in db into API, get token in response */
+    case LOGIN: {
+      const state = store.getState();
+      axios
+        .post('/api/login_check', {
+          username: state.user.username,
+          password: state.user.password
+        })
+        .then((response) => {
+          console.log('ça fonctionne', response);
+          store.dispatch(memorizeUser());
+          console.log(response.data.token);
+          // Default header config => Every request after login will use this header with token
+          axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
+        })
+        .catch((error) => {
+          console.log(error.response.request.response);
+        });
+      break;
+    }
+    /* LOGOUT => To delete the token when user logout */
+    case LOGOUT:
+      delete axios.defaults.headers.common.Authorization;
+      break;
+    /* SIGNUP => To register a first-time user into database API */
+    case SIGNUP: {
+      const state = store.getState();
+      axios
+        .post('/api/myaccount', {
+          email: state.user.username,
+          pseudo: state.user.pseudo,
+          password: { first: state.user.password1, second: state.user.password2 }
+        })
+        .then((response) => {
+          console.log('ça fonctionne', response);
+          store.dispatch(memorizeUserSignup(response.data.pseudo));
+        })
+        .catch((error) => {
+          console.log(error.response.request.response);
+        });
+      break;
+    }
+    /* FETCH_USERPLANTS => To get the connected user's plant list */
+    case FETCH_USERPLANTS: {
+      axios
+        .get('/api/myaccount')
+        .then((response) => {
+          console.log('ça fonctionne', response, response.data);
+          store.dispatch(saveUserPlants(response.data[1]));
+        })
+        .catch((error) => {
+          console.log(error.response.request.response);
+        });
+      break;
+    }
+    /* FETCH_USERPLANTS => To get the connected user's info */
+    // case FETCH_USERINFOS:
+    // {
+    //   axios.get('/api/myaccount')
     //     .then((response) => {
     //       console.log('ça fonctionne', response);
     //       store.dispatch(memorizeUser());

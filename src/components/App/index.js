@@ -24,9 +24,9 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Connexion />} />
         <Route exact path="/home" element={<Home />} />
-        <Route exact path="/mygames" element={<MyGames />} />
-        <Route exact path="/mygames/:game" element={<GameDetail />} />
-        <Route exact path="/profil" element={<Trophies />} />
+        <Route exact path="/trophies" element={<Trophies />} />
+        <Route exact path="/library" element={<MyGames />} />
+        <Route exact path="/library/:game" element={<GameDetail />} />
       </Routes>
       <AnimatePresence>
         {openSettings && (
