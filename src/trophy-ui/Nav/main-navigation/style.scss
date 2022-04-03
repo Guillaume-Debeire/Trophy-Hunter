@@ -1,0 +1,49 @@
+.navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  margin: auto;
+  width: max-content;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    position: relative;
+    z-index: 98;
+
+    li {
+      padding: .5rem;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      height:3rem;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0.3rem;
+  
+    }
+    &-selected {
+      // filter: invert(100%);
+      font-weight: bold;
+    }
+    &-unselected {
+      // filter: invert(0%);
+    }
+    &-background {
+      background-color: rgb(185, 185, 255);
+      height: 3rem;
+      width: 5rem;
+      z-index: 99;
+      border-radius: 5px;
+      position: absolute;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
