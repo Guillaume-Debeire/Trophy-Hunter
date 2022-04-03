@@ -1,7 +1,9 @@
 import React from 'react';
 import Title from 'src/trophy-ui/Title'
+import MainNavigation from 'src/trophy-ui/Nav/main-navigation/MainNavigation'
 
 import { AnimatePresence, motion } from 'framer-motion';
+import { navigationItems } from 'src/data/navigation'
 
 const Home = () => {
     const style = {
@@ -17,6 +19,9 @@ const Home = () => {
                 transition={{ duration: .2 }}
             >
                 <Title title='Home' style={style} />
+                <MainNavigation
+                    navItems={navigationItems}
+                />
             </motion.div>
         </AnimatePresence>
     )
