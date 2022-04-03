@@ -4,8 +4,9 @@ import Container from 'src/trophy-ui/Container';
 import Title from 'src/trophy-ui/Title';
 import GameCard from '../../trophy-ui/GameCard';
 import { AnimatePresence, motion } from 'framer-motion';
-
+import store from '../../store';
 import gamelist from 'src/data/games';
+import useTrophy from '../../hooks/useTrophy';
 
 import './style.scss';
 
@@ -13,6 +14,10 @@ const MyGames = () => {
   const style = {
     color: '#4e4368'
   };
+
+  console.log(useTrophy());
+
+  console.log(store);
   return (
     <AnimatePresence>
       <motion.div
@@ -25,7 +30,7 @@ const MyGames = () => {
         <div className="game-list">
           {gamelist.map((game) => {
             return (
-              <Link to={game.slug}>
+              <Link to={game.slug} key={game.id}>
                 <GameCard game={game} key={game.id} />
               </Link>
             );

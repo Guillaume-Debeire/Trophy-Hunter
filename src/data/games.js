@@ -11,6 +11,12 @@ export default [
         description: "Envoyez votre première demande d'équipement",
         earned: true,
         type: 'bronze'
+      },
+      {
+        name: 'La folle course',
+        description: 'Courez super vite',
+        earned: false,
+        type: 'bronze'
       }
     ]
   },

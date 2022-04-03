@@ -1,4 +1,5 @@
 import React from 'react';
+import useImage from '../../hooks/useImage';
 
 import './style.scss';
 
@@ -10,12 +11,43 @@ import gold from 'src/assets/img/trophy/gold.png';
 import platinum from 'src/assets/img/trophy/platinum.png';
 
 const GameCard = ({ game }) => {
-  const img = require('src/assets/games/' + game.slug + '.png');
-  console.log(img);
+  const { image } = useImage(game.slug);
+  const bronzeNb = game.trophies
+    .filter((troph) => {
+      return troph.type == 'bronze';
+    })
+    ?.filter((tro) => {
+      return tro.earned;
+    }).length;
+
+  const silverNb = game.trophies
+    .filter((troph) => {
+      return troph.type == 'silver';
+    })
+    ?.filter((tro) => {
+      return tro.earned;
+    }).length;
+
+  const goldNb = game.trophies
+    .filter((troph) => {
+      return troph.type == 'gold';
+    })
+    ?.filter((tro) => {
+      return tro.earned;
+    }).length;
+
+  const platinumNb = game.trophies
+    .filter((troph) => {
+      return troph.type == 'platinum';
+    })
+    ?.filter((tro) => {
+      return tro.earned;
+    }).length;
+
   return (
     <div className="gamecard">
       <div className="gamecard-picture">
-        <img className="gamecard-picture-img" src={img} />
+        <img className="gamecard-picture-img" src={image} />
       </div>
       <div className="gamecard-content">
         <div className="gamecard-content-left">
@@ -32,10 +64,10 @@ const GameCard = ({ game }) => {
             <img className="gamecard-content-right-trophies-img platinum" src={platinum}></img>
           </div>
           <div className="gamecard-content-right-number">
-            <p className="gamecard-content-right-number-text">23</p>
-            <p className="gamecard-content-right-number-text">8</p>
-            <p className="gamecard-content-right-number-text">2</p>
-            <p className="gamecard-content-right-number-text">1</p>
+            <p className="gamecard-content-right-number-text">{bronzeNb}</p>
+            <p className="gamecard-content-right-number-text">{silverNb}</p>
+            <p className="gamecard-content-right-number-text">{goldNb}</p>
+            <p className="gamecard-content-right-number-text">{platinumNb}</p>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState } from 'react';
+import useImage from '../../hooks/useImage';
 import { useParams } from 'react-router-dom';
 import Title from 'src/trophy-ui/Title';
 import Subtitle from 'src/trophy-ui/Subtitle';
@@ -21,6 +22,8 @@ const GameDetail = () => {
     return currGame.slug === paramGame.game;
   });
 
+  const { image } = useImage(game.slug);
+
   const [openDetail, setOpenDetail] = useState(false);
   return (
     <AnimatePresence>
@@ -34,7 +37,7 @@ const GameDetail = () => {
         <div className="gamedetail-content">
           <div className="gamedetail-content-top">
             <div className="gamedetail-content-top-left">
-              <img className="gamedetail-content-top-left-img" src={img} />
+              <img className="gamedetail-content-top-left-img" src={image} />
             </div>
             <div className="gamedetail-content-top-right">
               <p className="gamedetail-content-top-right-text">Time played : {game.timePlayed}</p>

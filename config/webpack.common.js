@@ -5,37 +5,39 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
+    'regenerator-runtime/runtime.js',
+    '/index.js',
     // SCSS
     paths.src + '/styles/index.scss',
     // JS
-    paths.src + '/index.js',
+    paths.src + '/index.js'
   ],
   output: {
     path: paths.build,
     publicPath: '/',
-    filename: 'js/[name].[contenthash].js',
+    filename: 'js/[name].[contenthash].js'
   },
   resolve: {
     alias: {
       src: paths.src,
-      app: paths.src,
-    },
+      app: paths.src
+    }
   },
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { 
+        {
           from: paths.static,
-          to: '',
+          to: ''
         }
-      ],
+      ]
     }),
 
     new HtmlWebpackPlugin({
       favicon: paths.assets + '/favicon.ico',
-      template: paths.assets + '/index.html',
-    }),
+      template: paths.assets + '/index.html'
+    })
   ],
 
   module: {
@@ -48,10 +50,10 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              cacheDirectory: true,
-            },
-          },
-        ],
+              cacheDirectory: true
+            }
+          }
+        ]
       },
 
       // Fonts
@@ -59,8 +61,8 @@ module.exports = {
         test: /\.(woff2?|eot|ttf|otf)$/,
         loader: 'file-loader',
         options: {
-          outputPath: 'fonts/',
-        },
+          outputPath: 'fonts/'
+        }
       },
 
       // Images
@@ -69,10 +71,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { outputPath: 'images/' },
-          },
-        ],
-      },
-    ],
-  },
+            options: { outputPath: 'images/' }
+          }
+        ]
+      }
+    ]
+  }
 };
