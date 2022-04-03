@@ -6,7 +6,7 @@ import GameCard from '../../trophy-ui/GameCard';
 import { AnimatePresence, motion } from 'framer-motion';
 import store from '../../store';
 import gamelist from 'src/data/games';
-import useTrophy from '../../hooks/useTrophy';
+// import useTrophy from '../../hooks/useTrophy';
 
 import './style.scss';
 
@@ -15,7 +15,7 @@ const MyGames = () => {
     color: '#4e4368'
   };
 
-  console.log(useTrophy());
+  // console.log(useTrophy());
 
   console.log(store);
   return (

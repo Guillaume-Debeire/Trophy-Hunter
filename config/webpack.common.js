@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: [
-    'regenerator-runtime/runtime.js',
-    '/index.js',
+    // 'regenerator-runtime/runtime.js',
+    // '../index.js',
     // SCSS
     paths.src + '/styles/index.scss',
     // JS
